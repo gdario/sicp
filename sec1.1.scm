@@ -1,3 +1,4 @@
+#lang sicp
 ;; Ex. 1.3
 (define (ssq-top2 x y z)
   (if (> x y) (+ (* x x) (if (> y z) (* y y) (* z z)))
