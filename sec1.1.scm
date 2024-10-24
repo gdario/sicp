@@ -1,12 +1,9 @@
 ;; Ex. 1.3
-(define (ssq x y)
-  (+ (* x x) (* y y)))
+(define (ssq-top2 x y z)
+  (if (> x y) (+ (* x x) (if (> y z) (* y y) (* z z)))
+    (+ (* y y) (if (> x z) (* x x) (* z z)))))
 
-(define (ssq-two-largest a b c)
-  (if (> a b) (if (> b c) (ssq a b) (ssq a c))
-      (if (> a c) (ssq a b) (ssq b c))))
-
-(ssq-two-largest 2 5 3)
+(ssq-top2 2 4 3)
 
 ;; Ex. 1.4
 (define (a-plus-abs-b a b)
